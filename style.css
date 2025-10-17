@@ -44,6 +44,7 @@ body {
   background: linear-gradient(180deg, #f6f7f9 0%, #749bd4 45%, #d0d4d8 100%);
   width: 100%;
   max-width: 900px;
+  width: min(900px, 94vw);
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
   padding: 1.25rem 1.5rem;
@@ -344,8 +345,8 @@ time[data-testid] {
   }
 
   .avatar::after {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
     left: 50%;
     top: 0;
     transform: translate(-50%, -6px);
@@ -354,6 +355,21 @@ time[data-testid] {
   .avatar-figcaption .avatar-controls {
     align-items: center;
     width: 100%;
+  }
+  /* Force url controls to stack and buttons to full width to avoid overlap */
+  .url-set {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .set-btn,
+  .upload-large .upload-btn,
+  .small-clear {
+    width: 100%;
+  }
+
+  .social ul {
+    gap: 0.4rem;
   }
 }
 
