@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Card — Emmanuel</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="container">
+      <article
+        class="profile-card"
+        data-testid="test-profile-card"
+        aria-label="User profile card"
+      >
+        <header class="card-header" data-testid="test-card-header">
+          <h2 data-testid="test-user-name">Ukanah Emmanuel Asusheyi</h2>
+        </header>
+
+        <div class="card-grid">
+          <figure class="avatar" data-testid="test-user-avatar-figure">
+            <img
+              data-testid="test-user-avatar"
+              src="https://avatars.githubusercontent.com/u/173580897?v=4"
+              alt="Avatar of Emmanuel"
+            />
+            <figcaption
+              class="avatar-figcaption"
+              data-testid="test-user-avatar-caption"
+            >
+              <span class="visually-hidden">Emmanuel's avatar</span>
+
+              <div class="avatar-controls" aria-label="Avatar controls">
+                <div class="url-set">
+                  <input
+                    id="avatar-url"
+                    data-testid="test-avatar-url-input"
+                    class="input url-input"
+                    type="url"
+                    placeholder="Enter image URL"
+                    aria-label="Enter image URL"
+                  />
+                  <button id="avatar-set-url" class="btn set-btn" data-testid="test-avatar-set-url">Set URL</button>
+                </div>
+
+                <div style="height:8px"></div>
+
+                <div class="upload-large">
+                  <input
+                    id="avatar-file"
+                    data-testid="test-avatar-file-input"
+                    class="input file-input"
+                    type="file"
+                    accept="image/*"
+                  />
+                  <label for="avatar-file" class="btn upload-btn" tabindex="0">Upload Image</label>
+                </div>
+
+                <button id="avatar-clear" data-testid="test-avatar-clear" class="btn small-clear">Clear avatar</button>
+              </div>
+              <div id="avatar-status" data-testid="test-avatar-status" class="visually-hidden" aria-live="polite"></div>
+            </figcaption>
+          </figure>
+
+          <section class="card-main">
+            <p data-testid="test-user-bio">
+             Hi, I’m Emmanuel Sheyi, a Frontend Developer who loves building user-friendly and efficient applications. I enjoy working on frontend , bringing ideas to life with modern tools and technologies.
+I'm a passionate frontend developer with a keen interest in creating dynamic and responsive web applications. I love turning ideas into reality through code and design.
+            </p>
+
+            <div class="meta-row">
+              <label class="visually-hidden" for="now"
+                >Current time in ms</label
+              >
+              <time id="now" data-testid="test-user-time">0</time>
+            </div>
+
+            <nav
+              class="social"
+              data-testid="test-user-social-links"
+              aria-label="Social links"
+            >
+              <ul>
+                <li>
+                  <a
+                    data-testid="test-user-social-twitter"
+                    href="https://x.com/emmanuelsheyi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Twitter</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-testid="test-user-social-github"
+                    href="https://github.com/Emmanuelsheyi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </li>
+                <li>
+                  <a
+                    data-testid="test-user-social-linkedin"
+                    href="inkedin.com/in/ukanah-emmanuel-686349302/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >LinkedIn</a
+                  >
+                </li>
+              </ul>
+            </nav>
+
+            <section
+              class="hobbies"
+              data-testid="test-user-hobbies"
+              aria-label="Hobbies"
+            >
+              <h3 data-testid="test-hobbies-heading">Hobbies</h3>
+              <ul>
+                <li data-testid="test-user-hobby-1">Building UI components</li>
+                <li data-testid="test-user-hobby-2">
+                  Testing APIs
+                </li>
+                <li data-testid="test-user-hobby-3">Watching football</li>
+                 <li data-testid="test-user-hobby-3">Travelling</li>
+              </ul>
+            </section>
+
+            <section
+              class="dislikes"
+              data-testid="test-user-dislikes"
+              aria-label="Dislikes"
+            >
+              <h3 data-testid="test-dislikes-heading">Dislikes</h3>
+              <ul>
+                <li data-testid="test-user-dislike-1">Broken accessibility</li>
+                <li data-testid="test-user-dislike-2">Unmaintainable CSS</li>
+            
+               <li data-testid="test-user-dislike-3">Slow Internet</li>
+                <li data-testid="test-user-dislike-4">Noise Pollution</li>
+              </ul>
+            </section>
+          </section>
+        </div>
+
+        
+      </article>
+    </main>
+  </body>
+</html>
