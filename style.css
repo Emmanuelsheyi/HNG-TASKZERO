@@ -320,7 +320,7 @@ time[data-testid] {
 
 .visually-hidden {
   position: absolute !important;
-  height: 1px;
+  height: 2px;
   width: 1px;
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
@@ -356,7 +356,7 @@ time[data-testid] {
     align-items: center;
     width: 100%;
   }
-  /* Force url controls to stack and buttons to full width to avoid overlap */
+  
   .url-set {
     flex-direction: column;
     gap: 0.5rem;
