@@ -269,6 +269,63 @@ time[data-testid] {
   align-items: center;
 }
 
+/* Contact form layout */
+.form-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 0.6rem 1rem;
+  align-items: start;
+  margin-bottom: 0.75rem;
+}
+
+.form-row label {
+  color: #0b0a0a;
+  font-weight: 600;
+}
+
+.form-row .input,
+.form-row input,
+.form-row textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid rgba(0,0,0,0.08);
+  background: #fff;
+  color: #0b0a0a;
+}
+
+.form-row .error {
+  grid-column: 2 / 3;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.form-row button.btn {
+  grid-column: 2 / 3;
+  justify-self: start;
+}
+
+/* Success status styling */
+#form-status {
+  color: #166534; /* green-800 */
+  background: rgba(16, 185, 129, 0.08); /* green-400 at low opacity */
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  margin-top: 0.5rem;
+}
+
+/* Remove underline from contact-info links */
+.contact-info a {
+  text-decoration: none;
+  color: #0b3d91; /* match primary button color */
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+  text-decoration: underline;
+}
+
 .file-wrapper {
   display: flex;
   gap: 0.5rem;

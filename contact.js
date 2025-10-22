@@ -31,6 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const message = document.getElementById('message').value.trim();
 
     let valid = true;
+    let firstInvalidId = null;
     if (!name) { showError('error-name', 'Name is required'); valid = false; }
     if (!email) { showError('error-email','Email is required'); valid = false; }
     else if (!validateEmail(email)) { showError('error-email','Enter a valid email'); valid = false; }
@@ -38,7 +39,23 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!message) { showError('error-message','Message is required'); valid = false; }
     else if (message.length < 10) { showError('error-message','Message must be at least 10 characters'); valid = false; }
 
-    if (!valid) return;
+    // determine first invalid field to focus (improves keyboard/screen-reader UX)
+    if (!valid) {
+      const idsInOrder = ['full-name','email','subject','message'];
+      for (const id of idsInOrder) {
+        const el = document.getElementById(id);
+        const described = el && el.getAttribute('aria-describedby');
+        if (described) {
+          const err = document.getElementById(described);
+          if (err && !err.classList.contains('visually-hidden')) { firstInvalidId = id; break; }
+        }
+      }
+      if (firstInvalidId) {
+        const firstEl = document.getElementById(firstInvalidId);
+        if (firstEl) firstEl.focus();
+      }
+      return;
+    }
 
     if(status) {
       status.textContent = 'Thanks — your message has been sent.';
