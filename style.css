@@ -253,6 +253,14 @@ time[data-testid] {
   color: #6b7280;
 }
 
+/* Error styles */
+#error-email,
+#error-subject,
+.error {
+  color: #dc2626; /* red-600 */
+  font-weight: 700;
+}
+
 .avatar-controls {
   display: flex;
   gap: 0.5rem;
