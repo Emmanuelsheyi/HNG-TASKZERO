@@ -14,8 +14,13 @@
         data-testid="test-profile-card"
         aria-label="User profile card"
       >
-        <header class="card-header" data-testid="test-card-header">
+          <header class="card-header" data-testid="test-card-header">
           <h2 data-testid="test-user-name">Ukanah Emmanuel Asusheyi</h2>
+          <nav aria-label="Primary navigation">
+            <button class="btn" type="button" onclick="location.href='about.html'">About</button>
+            <span aria-hidden="true" style="margin:0 0.5rem;color:rgba(0,0,0,0.4)">|</span>
+            <button class="btn" type="button" onclick="location.href='contact.html'">Contact</button>
+          </nav>
         </header>
 
         <div class="card-grid">

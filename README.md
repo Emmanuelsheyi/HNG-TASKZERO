@@ -1,34 +1,32 @@
-# Profile Card — Emmanuel
+# Profile Card — Stage 1 (Emmanuel)
 
-This is a small accessible, responsive Profile Card built with plain HTML, CSS and vanilla JavaScript 
+This project is a small, accessible, responsive Profile Card. extended with more deliverables:
+Contact and About pages, client-side form validation, and accessibility improvements. It's implemented with plain
+HTML5, CSS3 and vanilla JavaScript — no build step required.
+
+## What I implemented
+
+# Profile Card — simple README
+
+This is a small, accessible profile card built with plain HTML, CSS and JavaScript. It includes a page with an editable
+avatar and two extra pages: Contact and About.
+
+Quick start
+1. Open `index.html` in your browser to see the profile card.
+2. Open `contact.html` to try the contact form (client-side validation).
+3. Open `about.html` to read the About page.
+
+Files I added and changed
+- `index.html` — main profile card and avatar controls.
+- `style.css` — styles and responsive rules.
+- `script.js` — avatar handling and time updater.
+- `contact.html` + `contact.js` — contact form and validation.
+- `about.html` — About page content.
 
 
 
-## What this includes
-
-- Accessible semantic HTML (`article`, `figure`, `nav`, `section`, `time`, headings)
-- All required data-testid attributes for automated tests
-- Avatar via URL or file upload (file reads as data URL and is displayed)
-- Current time shown in milliseconds and updated every second
-- Responsive layout (stacked on small screens)
-
-# updating/Changing Avatar
-
-Option 1: URL Input
-
-1. Paste an image URL in the "Enter image URL" field
-2. Click "Set URL" or press Enter
-3. Avatar updates instantly
-
-Option 2: File Upload
-
-1. Click "Upload Image" button
-2. Select an image file from your device
-3. Avatar converts to data URL and displays
-
-## Notes
-
-- No inline CSS used — styles are in `style.css`.
-- Hosted with vercel 
+Notes
+- No build step or dependencies — just open the HTML files in a browser.
+- Accessibility: inputs are labelled; error messages use `role="alert"` and are announced to screen readers.
 
 
